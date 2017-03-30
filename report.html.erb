@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="page-header">
+      <h1>TIY Staff <small></small></h1>
+    </div>
+
+
+    <table class="table">
+      <thead>
+        <td>Name</td>
+        <td>Phone</td>
+        <td>Address</td>
+        <td>Postition</td>
+        <td>Salary</td>
+        <td>Slack</td>
+        <td>Github</td>
+      </thead>
+        <tbody>
+          <% @people.each do |person| %>
+          <tr>
+            <td><%= person.name %></td>
+            <td><%= person.phone %></td>
+            <td><%= person.address %></td>
+            <td><%= person.position %></td>
+            <td><%= person.salary %></td>
+            <td><%= person.slack %></td>
+            <td><%= person.github %></td>
+          </tr>
+          <% end %>
+        </tbody>
+    </table>
+
+
+    <p>The total salaries for instructors is <%= total_salaries_instructor %></p>
+    <p>The total salareis for Campus Directors is <%= total_salaries_campus_directors %></p>
+    <p>The total number of instructors is <%= number_of_instructors %></p>
+    <p>The total number of Campus Instructors is <%= number_of_campus_directors %></p>
+    <p>The total number of students is <%= number_of_students %></p>
+
+
+    <!-- Angela writes some erb code here to loop through @people and make a report
+
+
+        **** Show each employee and their details (name, phone, address, position, salary, slack account, github account)
+
+
+
+
+
+        At the end of the report show the total salary for each of the following:
+        *** Instructor
+        ***Campus Director
+
+
+        ******At the end of the report show total count for the following:
+        ****Instructor
+      ****  Campus Director
+      *****  Student
+        Use a nice format of your choosing. Try to think about UI design here even though it is a text output format.
+    -->
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>
